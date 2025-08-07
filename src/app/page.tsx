@@ -1,95 +1,35 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import CustomAppBar from "@/component/appbar/CustomAppBar";
+import ScrollXDisplay from "@/component/display/ScrollX/ScrollXDisplay";
+import "./app.css";
+import CategoryDisplay from "@/component/display/Category/CategoryDisplay";
+import categoryData from "@/data/categoryData";
+import CustomOffer from "@/component/display/CustomOffer";
+import bouquetsData from "@/data/bouquetsData";
+import Divider from "@mui/material/Divider";
+import SpecialDisplay from "@/component/display/Special/SpecialDisplay";
+import { EmblaOptionsType } from "embla-carousel";
+import GridDisplay from "@/component/display/Grid/GridDisplay";
 
-export default function Home() {
+const OPTIONS: EmblaOptionsType = { loop: true };
+const SLIDE_COUNT = 6;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
+export default function App() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <CustomAppBar />
+      <CategoryDisplay label="Categories" categories={categoryData} />
+      <Divider variant="middle" />
+      <ScrollXDisplay label="Featured flowers" flowers={bouquetsData} />
+      <Divider variant="middle" />
+      <CustomOffer flower={bouquetsData[2]} />
+      <Divider variant="middle" />
+      <SpecialDisplay slides={SLIDES} options={OPTIONS} bgUrl="/assets/images/backgrounds/a-bouquet-of-flowers-on-a-wooden-floor-photo.jpeg" flower={bouquetsData[5]} />
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <ScrollXDisplay label="Hot bouquets" flowers={bouquetsData} />
+      <Divider variant="middle" />
+      <GridDisplay label="Latest bouquets" flowers={bouquetsData} />
+      <Divider variant="middle" />
+    </>
   );
 }

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "RedditSans";
+  src: url("/fonts/RedditSans-Regular.ttf") format("ttf");
+  /* font-weight: normal;
+  font-style: normal;
+  font-display: swap; */
+}
+
+html {
+  font-family: "RedditSans" !important;
+  font-size: 75.5%;
+}

@@ -1,0 +1,34 @@
+.count-body {
+  display: flex;
+  margin: 6px;
+}
+
+.count-body .minus-count {
+  border-radius: 12px 0px 0px 12px;
+}
+
+.count-body .add-count {
+  border-radius: 0px 12px 12px 0px;
+}
+
+.count-body .add-count,
+.count-body .minus-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 30px;
+  width: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-drag: none;
+  cursor: pointer;
+}
+
+.count-body .count-label {
+  border: 1px solid black;
+  width: 30px;
+  outline: none;
+  text-align: center;
+}
