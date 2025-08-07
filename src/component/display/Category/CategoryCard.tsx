@@ -8,7 +8,7 @@ interface CategoryCardProps {
   category: CategoryType;
 }
 
-const CardItem = styled(Card)(({ theme }) => ({
+const CardItem = styled(Card)(({}) => ({
   width: 100,
   padding: "6px 2px",
   backgroundColor: "#7117B1",

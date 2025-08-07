@@ -28,7 +28,7 @@ export default function ItemCount({ count, setCount }: ItemCountProps) {
       <input className="count-label" value={count} onChange={handleChange} />
       <div
         className="add-count"
-        onClick={(e) => {
+        onClick={() => {
           setCount((prevCount) => {
             const countNumber = Number(prevCount);
             if (countNumber >= 999) return "999";

@@ -2,7 +2,7 @@
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { useAutoplay } from "./EmblaCarouselautoplayv2";
+// import { useAutoplay } from "./EmblaCarouselautoplayv2";
 import "./css/base.css";
 import "./css/embla.css";
 import "./css/sandbox.css";
@@ -16,7 +16,7 @@ type EmblaCarouselProps = {
 export default function EmblaCarousel(props: EmblaCarouselProps) {
   const { slides, options } = props;
 
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay({ playOnInit: true, delay: 3000 })]);
+  const [emblaRef] = useEmblaCarousel(options, [Autoplay({ playOnInit: true, delay: 3000 })]);
   // const { autoplayIsPlaying, toggleAutoplay, onAutoplayButtonClick } = useAutoplay(emblaApi);
 
   return (

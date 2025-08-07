@@ -1,6 +1,6 @@
 import "./style.css";
 import "../../app.css";
-import { Button, Divider, InputLabel, Link, TextField, Typography } from "@mui/material";
+import { Button, Divider, Link, TextField, Typography } from "@mui/material";
 
 export default function LoginScreen() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import FlowerType from "@/types/flowerType";
-import { Button, Card, styled, Typography } from "@mui/material";
+import { Button, styled, Typography } from "@mui/material";
 import Image from "next/image";
 
 interface CustomOfferProps {
@@ -36,7 +36,7 @@ export default function CustomOffer(props: CustomOfferProps) {
   return (
     <ItemsDiv>
       <ImageBlock>
-        <Image  src={props.flower.imageUrl} alt="Flower Image" fill style={{ objectFit: "cover", borderRadius: 4 }} />
+        <Image src={props.flower.imageUrl} alt="Flower Image" fill style={{ objectFit: "cover", borderRadius: 4 }} />
       </ImageBlock>
       <div style={{ padding: "0px 4px" }}>
         <Typography variant="h4" fontWeight={"bold"}>
@@ -51,7 +51,9 @@ export default function CustomOffer(props: CustomOfferProps) {
           <li>Many variants of flowers to choose</li>
           <li>Colorful flowers</li>
         </ul>
-        <Button variant="contained" sx={{margin: "0px 20px 20px 20px"}}>Contact us</Button>
+        <Button variant="contained" sx={{ margin: "0px 20px 20px 20px" }}>
+          Contact us
+        </Button>
       </div>
     </ItemsDiv>
   );

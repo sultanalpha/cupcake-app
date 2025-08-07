@@ -10,7 +10,7 @@ interface ScrollXCardProps {
   flower: FlowerType;
 }
 
-const CardItem = styled(Card)(({ theme }) => ({
+const CardItem = styled(Card)(({}) => ({
   width: width,
   display: "flex",
   flexDirection: "column",

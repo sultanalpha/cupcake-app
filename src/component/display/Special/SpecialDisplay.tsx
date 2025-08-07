@@ -53,7 +53,7 @@ const MobileCardContainer = styled("div")(({ theme }) => ({
   alignItems: "center",
 }));
 
-const CardBlock = styled(Card)(({ theme }) => ({
+const CardBlock = styled(Card)(({}) => ({
   height: "75%",
   width: "30%",
   backgroundColor: "white",
