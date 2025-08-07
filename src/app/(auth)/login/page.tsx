@@ -60,7 +60,7 @@ export default function LoginScreen() {
             }}
           />
           <Typography textAlign={"center"}>
-            Don't have an account? <Link href="/signup">Sign up</Link>
+            Don&apos;t have an account? <Link href="/signup">Sign up</Link>
           </Typography>
         </form>
       </div>
